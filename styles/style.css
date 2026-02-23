@@ -1,3 +1,52 @@
-div {
-background-color: aliceblue;
+body{
+    background-color: rgb(6, 194, 175);
 }
+
+h1 {
+    color:rgb(221, 13, 65);
+}
+div {
+background-color: rgb(162, 11, 173);
+width: 20vw;
+}
+.divRojo {
+    background-color: rgb(250, 0, 0);
+
+}
+
+#divUnico{
+    background-color: orchid;
+}
+#dibujo {
+    width: 20vw;
+    height: 20vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cara{
+    width: 60%;
+    height:70%;
+    background-color: rgb(255, 238, 0);
+    border-radius: 80%;
+    position: relative;
+}
+.ojo{
+    width: 20%;
+    height:20%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    position:absolute;
+}
+#ojoiz {
+    top: 20%;
+    left: 20%;
+}
+
+#ojoder{
+    top: 20%;
+    right: 17%;
+}
+
