@@ -24,6 +24,7 @@ width: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #cara{
@@ -32,6 +33,10 @@ width: 20vw;
     background-color: rgb(255, 238, 0);
     border-radius: 80%;
     position: relative;
+    transition: all 4s ease-in;
+}
+#cara:hover {
+    transform: rotate(360deg) scale(0);
 }
 .ojo{
     width: 20%;
@@ -39,11 +44,36 @@ width: 20vw;
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
     position:absolute;
-    overflow: hidden;   /* para que la pupila no se salga */
-}
+    overflow: hidden; 
 #ojoiz {
     top: 20%;
     left: 20%;
+}
+@keyframes parpadear {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0);
+    }
+}
+
+.ojo {
+    width: 20%;
+    height:20%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position:absolute;
+    overflow: hidden;
+    transform-origin: center;
+    animation: parpadear 3s infinite;
+}
+.ojo {
+    transform-origin: center;
+    animation: parpadear 4s infinite;
+}
+#ojoder {
+    animation: parpadear 2.5s infinite;
 }
 
 #ojoder{
@@ -61,12 +91,32 @@ width: 20vw;
 }
 .boca{
     width: 63%;
-    height:27%;
+    height:30%;
     background-color: rgb(0, 0, 0);
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 80px 80px;
     position:absolute;
     top: 60%;
     left:20%;
+    overflow:hidden
+}
+.lengua{
+    width: 50%;
+    height:60%;
+    background-color: rgb(255, 67, 148);
+    border-radius: 0 0 50px 50px;
+    position:absolute;
+    bottom: 0;
+    left:25%;
+    transform: translateY(100%);
+    animation: lenguaMover 2s infinite ease-in-out;
+}
+@keyframes lenguaMover {
+    0%, 100% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
 }
 .sombrero{
     position: absolute;
@@ -110,4 +160,22 @@ width: 20vw;
     border-radius: 50%;
     position: absolute;
     top: -10%;
+}
+#varita:hover{
+    background-color: chartreuse;
+    
+}
+#punta:hover{
+    background-color: rgb(0, 24, 102);
+    
+}
+@keyframes temblar {
+    0% { transform: rotate(30deg) translateX(0); }
+    25% { transform: rotate(35deg) translateX(2px); }
+    50% { transform: rotate(25deg) translateX(-2px); }
+    75% { transform: rotate(35deg) translateX(2px); }
+    100% { transform: rotate(30deg) translateX(0); }
+}
+.varita {
+    animation: temblar 0.3s infinite;
 }
